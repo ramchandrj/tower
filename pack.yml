@@ -1,0 +1,21 @@
+---
+- name: session on Ansible and git
+  hosts:  node1.example.com
+  tasks:
+    - name: Install Apackge on the managed hosts
+      yum:
+        name: http
+        state:  latest
+    - name: start and enable the web service
+      service:
+        name: httpd
+        state:  started
+        enabled:  true
+    - git:
+        repo: https://github.com/ramchandrj/tower.git
+        dest: /home/ramchand/ansible/tower
+
+    - copy:
+        src: /home/ramchand/ansible/tower/index.html
+        dest: /var/www/html/index.html
+        remote_src: yes
