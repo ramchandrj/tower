@@ -1,6 +1,9 @@
 # tower
 ---
 - name:adding users
+  hosts:  all
+  remote_user:  ramchand
+  become: true
   user:
     name: "{{item}}"
     state:  present
