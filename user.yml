@@ -1,8 +1,6 @@
 # tower
 ---
-- name: adding users
-  hosts:  all
-  remote_user:  ramchand
+- hosts:  all
   become: true
   user:
     name: "{{item}}"
