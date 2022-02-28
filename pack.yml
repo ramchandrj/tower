@@ -1,6 +1,6 @@
 ---
 - name: session on Ansible and git
-  hosts:  node1.example.com
+  hosts:  all
   tasks:
     - name: Install Apackge on the managed hosts
       yum:
