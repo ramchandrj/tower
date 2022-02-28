@@ -1,0 +1,19 @@
+---
+- name: creating user
+  hosts:  all
+  become: true
+  tasks:  
+    name: create user
+    user:
+      name: "{{item}}"
+      state:  present
+    loop:
+      - one
+      - two
+      - three
+      - four
+      - five
+      - six
+      - seven
+      - nine
+      - ten
