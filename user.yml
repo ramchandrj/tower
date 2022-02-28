@@ -1,6 +1,6 @@
 # tower
 ---
-- name:adding users
+- name: adding users
   hosts:  all
   remote_user:  ramchand
   become: true
