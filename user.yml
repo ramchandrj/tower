@@ -1,0 +1,17 @@
+# tower
+---
+- name:adding users
+  user:
+    name: "{{item}}"
+    state:  present
+  loop:
+    - one
+    - two
+    - three
+    - four
+    - five
+    - six
+    - seven
+    - eight
+    - nine
+    - ten
