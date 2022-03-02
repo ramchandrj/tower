@@ -1,18 +1,20 @@
 ---
-- hosts:  all
+- name: creating users
+  hosts:  all
   become: true
-  tasks:  
-    name: create user
-    user:
-      name: "{{item}}"
-      state:  present
-    loop:
-      - one
-      - two
-      - three
-      - four
-      - five
-      - six
-      - seven
-      - nine
-      - ten
+  tasks:
+    - name: create multipule users
+      user:
+        name: "{{item}}"
+        state:  present
+      loop:
+        - one
+        - two
+        - three
+        - four
+        - five
+        - six
+        - seven
+        - nine
+        - ten
+        
