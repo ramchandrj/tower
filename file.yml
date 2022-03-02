@@ -1,0 +1,13 @@
+---
+- hosts:  all
+  become: true
+  remote_user:  ramchand
+  tasks:
+    - name: creating a dir
+      file:
+        name: /home/ramchand/mydir
+        state:  directory
+    - file: creating a file in mydir
+      name: /home/ramchand/mydir/myfile.yml
+      state:  touch 
+      
